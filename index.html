@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8">
+        <title>index</title>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/gsap.min.js" integrity="sha512-IQLehpLoVS4fNzl7IfH8Iowfm5+RiMGtHykgZJl9AWMgqx0AmJ6cRWcB+GaGVtIsnC4voMfm8f2vwtY+6oPjpQ==" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/ScrollToPlugin.min.js" integrity="sha512-nTHzMQK7lwWt8nL4KF6DhwLHluv6dVq/hNnj2PBN0xMl2KaMm1PM02csx57mmToPAodHmPsipoERRNn4pG7f+Q==" crossorigin="anonymous"></script>
+        <link rel="stylesheet" href="css/index.css" />
+    </head>
+    <body>
+        <center>
+            <h1 id="title">Click me!<br>↓</h1>
+        </center>
+        <div class="wrap">
+            <input type="checkbox" id="circlebtn" onClick="setTimeout(function() {
+                location.href='home.html';
+            }, 1000);">
+            <label for="circlebtn" class="circle"></label>
+        </div>
+        <br>
+        <hr id="bar1">
+        <script>
+            function random(min, max) {
+              return parseFloat((Math.random() * (max - min) + min).toFixed(2))
+            }
+            
+            function floatingObject(selector,delay,size){
+              gsap.to(selector, random(1.5,2.5), {
+                y: size,
+                repeat: -1,
+                yoyo: true,
+                ease: Power1.easeInOut,
+                delay: random(0,delay)
+              })
+            }
+            floatingObject('.circle',0,30)
+        </script> 
+    </body>
+</html>

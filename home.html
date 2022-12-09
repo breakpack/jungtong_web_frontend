@@ -1,0 +1,104 @@
+<?
+session_start();
+$id = $_SESSION['user_id']; 
+?>
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="utf-8">
+        <title>home</title>
+        <link rel="stylesheet" href="css/home.css" />
+    </head>
+    <body>
+        <script>
+            function move(){
+                location.href='login/login.php';
+            }
+            function move2(){
+                location.href='login/register.php';
+            }
+            function move3(){
+                location.href='login/logout.php';
+            }
+        </script>
+        <div class="background">
+            <? 
+            if(isset($id)) {
+            ?>
+            <h3 id="login" Onclick="move3()">logout</h3>
+            <?
+            }
+            else{
+            ?>
+            <h3 id="login" Onclick="move()">login</h3>
+            <h3 id="register" Onclick="move2()">register</h3>
+            <?
+            }
+            ?>
+            <input id="sidebar" type="checkbox" />
+            <div class="sidebar">
+                <div class="wrapper">
+                    <div class="wave"></div>
+                </div>
+                <label for="sidebar" id="sidebarbtn"><div id="sidebar_btn"></div></label>
+                <div class="index">
+                    <h2>CHA's STORY</h2>
+                    <a href="home.html">-Main</a><br>
+                    <a href="story.html">-My Story</a><br>
+                    <a href="project.html">-My Project</a><br>
+                    <a href="artwork.html">-My Artwork</a>
+                </div>
+            </div>
+            <div class="contents">
+                <h2 id="title">Hi! Nice to Meet you!!</h2>
+                <a href="https://www.instagram.com/plz.cantabile/" class="icon">
+                    <div class="ins_sq"></div>
+                    <div class="ins_circle1"></div>
+                    <div class="ins_circle2"></div>
+                    <div class="ins_circle3"></div>
+                </a>
+                <hr>
+                <div class="intro">
+                    <h2>안녕하세요 정보통신공학과 차원제 입니다.</h2>
+                    <div>
+                        이 사이트는 저를 표현한 사이트 입니다.<br>제가 살아온 과정, 정보보안의 꿈을 가지고 있는 제가 진행한 프로젝트, 저의 예술적인 작품들을 이 사이트에 녹여보았습니다! 그리고 사이트의 모든 부분을 제가 만들었는데요, 항상 창의적이고 새로운 것에 도전하려고 하는 마음을 담아서 사이트를 제작하였고, 재밌게 감상해 주셨으면 좋겠습니다. 감사합니다.
+                    </div>
+                </div>
+                <? 
+                if(isset($id)) {
+                ?>
+                <img src="img/home_pic2.jpg" id="img1">
+                <?
+                }
+                else{
+                ?>
+                <img src="img/home_pic1.png.jpg" id="img1">
+                <?
+                }
+                ?>
+            </div>
+            <div class="contents2">
+                <h2 id="title">My link</h2>
+                <hr id="bar1">
+                <a href="#"><img src="img/kakao.png" id="img2"></a>
+                <div class="link1">
+                    <h2>카카오톡 오픈채팅</h2>
+                    <div>
+                            차원제의 카카오톡 오픈채팅방입니다. 스터디 용도로 이용되고 있습니다. <br>학과관련 자료들과 공모전 자료들을 계속 올리고 있으니 같이 많이 참여해요!
+                    </div>
+                </div>
+                <a href="https://github.com/breakpack"><img src="img/githublogo.png" id="img3"></a>
+                <div class="link2">
+                    <h2>Git</h2>
+                    <div>
+                            차원제의 Git hub입니다. 지금까지의 프로젝트 들을 담고 있습니다.<br>정보보안과 관련된 여러가지 활동들이 있습니다. 실제 서비스에 연습하면 불법이니 조심하세요!
+                    </div>
+                </div>
+            </div>
+            <div class="contents3">
+                <hr>
+                <h2 id="title">Thanks you!</h2>
+            </div>
+        </div>
+    </body>
+</html>

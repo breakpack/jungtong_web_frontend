@@ -1,0 +1,264 @@
+@keyframes head_down {
+    0%{top:-50%;}
+    100%{top:0%;}    
+}
+@keyframes wave {
+    from { transform: rotate(0deg);}
+    from { transform: rotate(-360deg);}
+}
+@keyframes contents_ani {
+    0%{bottom:-70%;}
+    40%{bottom:10%;}
+    70%{bottom:0;}    
+}
+@keyframes contents_ani2 {
+    0%{top:100vh;}
+    60%{top:17vh;}
+    100%{top:21vh;}    
+}
+@keyframes contents_big {
+    0%{width:0;}
+    100%{width:100%;}    
+}
+@keyframes contents_small {
+    0%{width:82vw; height: auto;visibility: visible;}
+    100%{width:0vw;height: 0;visibility: hidden;}
+}
+@keyframes con_test {
+    0%{visibility: hidden;}
+    100%{visibility: visible;}
+}
+@font-face {
+    font-family : 'SDMiSaeng';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_two@1.0/SDMiSaeng.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+body,html {
+    font-family: 'SDMiSaeng';
+    width:0;
+    height: 0;
+    margin:0;
+    background-color: #F9EBDE;
+}
+#head{
+    width:0;
+    height: 0;
+    margin:0;
+    border: 0;
+    padding: 0;
+}
+.head{
+    position: absolute;
+    width:100%;
+    height:33%;
+    animation: head_down 2s forwards;
+}
+.sq{
+    overflow: hidden;
+    z-index: 2;
+    position:absolute;
+    width:100%;
+    height: 70%;
+    margin:0;
+    background-color: #815854;
+    overflow: visible;
+}
+.sq a{
+    text-decoration: none;
+    width:300px;
+}
+.sq #h2_1{
+    position: absolute;
+    top:-5%;
+    width:30%;
+    color: #F9EBDE;
+    font-size: 70px;
+}
+.sq #h2_2{
+    z-index: 10;
+    top:80%;
+    left:85vw;
+    text-decoration: none;
+    position: absolute;
+    width:auto;
+    width:auto;
+    color: #F9EBDE;
+    font-size: 30px;
+}
+.tra{
+    overflow: hidden;
+    z-index: 1;
+    top:-7%;
+    right:-3%;
+    position:relative;
+    width:100%;
+    height:80%;
+    transform: rotate(5deg);
+    background-color: #815854;
+}
+#head_btn{
+    z-index: 9;
+    position: relative;
+    left:25%;
+    top:1%;
+    width:30px;
+    height: 30px;
+    border-radius: 30%;
+    background-color: #815854;
+    animation: wave 10s infinite linear;
+}
+#head_btn:hover{
+    cursor: Pointer;
+    animation: wave 1s infinite linear;
+}
+div{
+    overflow: hidden;
+}
+.contents_side{
+    z-index: 5;
+    position:absolute;
+    width:12vw;
+    height: 73vh;
+    bottom:0;
+    animation: contents_ani 3s forwards;
+}
+.sub_side{
+    position: relative;
+    width:100%;
+    height:120%;
+}
+.sub_side hr{
+    position:absolute;
+    left:3.4em;
+    top:3em;
+    bottom:0em;
+    width:10px;
+    height:500px;
+    border-radius: 10%;
+    background-color:#815854;
+    border:0;
+}
+.sub_side .circle{
+    top:3vh;
+    position: relative;
+    padding:0;
+    left:2.15em;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    cursor: Pointer;
+    background-color: #815854;
+}
+.sub_side #contents{
+    position: relative;
+    font-size: 20px;
+    top:-13px;
+    left: 4.5em;
+    color: #815854;
+}
+#contents_title{
+    top:30vh;
+    left:15.5vw;
+    position:absolute;
+    font-size: 50px;
+    color:#815854;
+
+    animation-name: contents_ani2;
+    animation-duration: 3s;
+    animation-fill-mode: forwards;
+}
+input{
+    display: none;
+}
+.baby, .ele, .high, .campus{
+    position: absolute;
+    display: inline;
+    top:35vh;
+    left:16vw;
+}
+.baby img, .ele img, .high img, .campus img{
+    width:0;
+    margin:0;
+}
+.baby, .ele, .high, .campus{
+    width:75%;
+    column-width:350px;
+    column-gap: 15px;
+}
+figcaption{
+    font-size: 30px;
+    display: none;
+}
+#baby:checked ~ .baby img{
+    animation-name: contents_big;
+    animation-duration: 3s;
+    animation-fill-mode: forwards;
+}
+#baby:checked ~ .baby figure{
+    display: inline-block;
+    border:1px solid rgba(0,0,0,0.2);
+    margin:0;
+    margin-bottom: 15px;
+    padding:10px;
+    box-shadow: 2px 2px 5px rgba(0,0,0,0.5);
+}
+#baby:checked ~ .baby figcaption{
+    display: initial;
+    padding:10px;
+    margin-top:11px;
+}
+#ele:checked ~ .ele img{
+    animation-name: contents_big;
+    animation-duration: 3s;
+    animation-fill-mode: forwards;
+}
+#ele:checked ~ .ele figure{
+    display: inline-block;
+    border:1px solid rgba(0,0,0,0.2);
+    margin:0;
+    margin-bottom: 15px;
+    padding:10px;
+    box-shadow: 2px 2px 5px rgba(0,0,0,0.5);
+}
+#ele:checked ~ .ele figcaption{
+    display: initial;
+    padding:10px;
+    margin-top:11px;
+}
+#high:checked ~ .high img{
+    animation-name: contents_big;
+    animation-duration: 3s;
+    animation-fill-mode: forwards;
+}
+#high:checked ~ .high figure{
+    display: inline-block;
+    border:1px solid rgba(0,0,0,0.2);
+    margin:0;
+    margin-bottom: 15px;
+    padding:10px;
+    box-shadow: 2px 2px 5px rgba(0,0,0,0.5);
+}
+#high:checked ~ .high figcaption{
+    display: initial;
+    padding:10px;
+    margin-top:11px;
+}
+#campus:checked ~ .campus img{
+    animation-name: contents_big;
+    animation-duration: 3s;
+    animation-fill-mode: forwards;
+}
+#campus:checked ~ .campus figure{
+    display: inline-block;
+    border:1px solid rgba(0,0,0,0.2);
+    margin:0;
+    margin-bottom: 15px;
+    padding:10px;
+    box-shadow: 2px 2px 5px rgba(0,0,0,0.5);
+}
+#campus:checked ~ .campus figcaption{
+    display: initial;
+    padding:10px;
+    margin-top:11px;
+}

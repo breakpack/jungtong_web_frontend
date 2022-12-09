@@ -1,0 +1,68 @@
+@keyframes size_up {
+    0%   {width:200px; height: 200px;}
+    100%  {width:300px; height: 300px;}
+}
+@keyframes remove {
+    0%   {width:200px; height: 200px;}
+    100%  {width:0; height: 0;}
+}
+@keyframes loading_ani{
+    0% {width:0px;}
+    100% {width: 200px;}    
+}
+body{
+    background-color: #815854;
+}
+.circle{
+    width : 150px;
+    height : 150px;
+    border-radius: 50%;
+    background-color :#F9EBDE;
+}
+.background{
+    background-color: #F9EBDE;
+    width:100%;
+    height:100%;
+}
+#circlebtn{
+    width :0;
+    height: 0;
+}
+.circle:hover{
+    animation-name: size_up;
+    animation-duration: 2s;
+    animation-fill-mode: forwards;
+}
+#circlebtn:checked ~ .circle{
+    animation-name: remove;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+    width: 0px;
+    height: 0px;
+}
+.wrap {
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 70vh;
+}
+#bar1{
+    position:relative;
+    bottom:10em; 
+    height: 10px;
+    background-color: #F9EBDE;
+    border:0;
+    left:5px;
+}
+#bar1{
+    animation-name: loading_ani;
+    animation-duration: 5s;
+    animation-fill-mode: forwards;
+}
+#title{
+    position: relative;
+    top:3em;
+    width: 200px;
+    height: 10px;
+    color: #F9EBDE;
+}

@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="utf-8">
+        <title>story</title>
+        <link rel="stylesheet" href="css/artwork.css" />
+    </head>
+    <body>
+        <script>
+            
+            function is_checked(){
+                var key = 0;
+                const art_input = document.getElementById("art");
+                const photo_input = document.getElementById("photo");
+            
+                const art_is_checked = art_input.checked;
+                const photo_is_checked = photo_input.checked;
+                
+                if(art_is_checked){
+                    key += 1;
+                }
+                if(photo_is_checked){
+                    key += 1;
+                }
+                
+                return key;
+            }
+
+            function checkbox_check(box_id){
+                const art_input = document.getElementById("art");
+                const photo_input = document.getElementById("photo");
+                
+                if(is_checked()){
+                    if(box_id == 'art'){
+                        photo_input.checked=false;
+                    }
+                    if(box_id == 'photo'){
+                        art_input.checked=false;
+                    }
+                }
+            }
+        </script>
+        <input id="head" type="checkbox" />
+        <div class="head">
+            <div class="sq">
+                <a href="home.html">
+                    <h2 id="h2_1">
+                        &nbsp; CHA's Story
+                    </h2>
+                </a>
+                <a href="story.html">
+                    <h2 id="h2_2">
+                        Artwork page
+                    </h2>
+                </a>
+            </div>
+            <div class="tra"></div>
+        </div>
+        <div class="contents_side">
+            <div class="sub_side">
+                <div id="head_btn" onClick="javascript:window.scrollTo(0,0)"></div>
+                <hr>
+                <label for="art" id="sidebarbtn"><div id="circle1" class="circle" Onclick="checkbox_check('art')"></div></label>
+                <div id="contents">Drawing</div>
+                <label for="photo" id="sidebarbtn"><div id="circle2" class="circle" Onclick="checkbox_check('photo')"></div></label>
+                <div id="contents">Photo</div>
+            </div>
+        </div>
+        <h2 id="contents_title">Contents</h2>
+        
+        <input id="art" type="checkbox" checked/>
+        <div class="art">
+            <img src="img/artwork (2).png"><br><br><br>
+            <img src="img/artwork (3).png"><br><br><br>
+            <img src="img/artwork (4).png"><br><br><br>
+            <img src="img/artwork (8).png"><br><br><br>
+            <img src="img/artwork.png"><br><br><br>
+        </div>
+        <input id="photo" type="checkbox" />
+        <div class="photo">
+            <img src="img/artwork (1).png"><br><br><br>
+            <img src="img/artwork (6).png"><br><br><br>
+            <img src="img/artwork (7).png"><br><br><br>
+            <img src="img/artwork (9).png"><br><br><br>
+        </div>
+    </body>
+</html>

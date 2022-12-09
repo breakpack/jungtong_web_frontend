@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="utf-8">
+        <title>story</title>
+        <link rel="stylesheet" href="css/project.css" />
+    </head>
+    <body>
+        <script>
+            
+            function is_checked(){
+                var key = 0;
+                const baby_input = document.getElementById("baby");
+                const ele_input = document.getElementById("ele");
+                const high_input = document.getElementById("high");
+                const campus_input = document.getElementById("campus");
+
+                const baby_is_checked = baby_input.checked;
+                const ele_is_checked = ele_input.checked;
+                const high_is_checked = high_input.checked;
+                const campus_is_checked = campus_input.checked;
+
+                if(baby_is_checked){
+                    key += 1;
+                }
+                if(ele_is_checked){
+                    key += 1;
+                }
+                if(high_is_checked){
+                    key += 1;
+                }
+                if(campus_is_checked){
+                    key += 1;
+                }
+                
+                return key;
+            }
+
+            function checkbox_check(box_id){
+                const baby_input = document.getElementById("baby");
+                const ele_input = document.getElementById("ele");
+                const high_input = document.getElementById("high");
+                const campus_input = document.getElementById("campus");
+                
+                if(is_checked()){
+                    if(box_id == 'baby'){
+                        ele_input.checked=false;
+                        high_input.checked=false;
+                        campus_input.checked=false;
+                    }
+                    if(box_id == 'ele'){
+                        baby_input.checked=false;
+                        high_input.checked=false;
+                        campus_input.checked=false;
+                    }
+                    if(box_id == 'high'){
+                        baby_input.checked=false;
+                        ele_input.checked=false;
+                        campus_input.checked=false;
+                    }
+                    if(box_id == 'campus'){
+                        baby_input.checked=false;
+                        ele_input.checked=false;
+                        high_input.checked=false;
+                    }
+                }
+            }
+        </script>
+        <input id="head" type="checkbox" />
+        <div class="head">
+            <div class="sq">
+                <a href="home.html">
+                    <h2 id="h2_1">
+                        &nbsp; CHA's Story
+                    </h2>
+                </a>
+                <a href="story.html">
+                    <h2 id="h2_2">
+                        Project page
+                    </h2>
+                </a>
+            </div>
+            <div class="tra"></div>
+        </div>
+        <div class="contents_side">
+            <div class="sub_side">
+                <div id="head_btn" onClick="javascript:window.scrollTo(0,0)"></div>
+                <hr>
+                <label for="baby" id="sidebarbtn"><div id="circle1" class="circle" Onclick="checkbox_check('baby')"></div></label>
+                <div id="contents">유딩 원제</div>
+                <label for="ele" id="sidebarbtn"><div id="circle2" class="circle" Onclick="checkbox_check('ele')"></div></label>
+                <div id="contents">초딩 원제</div>
+                <label for="high" id="sidebarbtn"><div id="circle3" class="circle" Onclick="checkbox_check('high')"></div></label>
+                <div id="contents">중●고딩 원제</div>
+                <label for="campus" id="sidebarbtn"><div id="circle5" class="circle" Onclick="checkbox_check('campus')"></div></label>
+                <div id="contents">현재의 원제</div>
+            </div>
+        </div>
+        <h2 id="contents_title">Contents</h2>
+        
+        <input id="baby" type="checkbox" checked/>
+        <div class="baby">
+            <img src="img/story (2).jpg"><br>
+            <img src="img/story (3).JPG">
+        </div>
+        <input id="ele" type="checkbox" />
+        <div class="ele">
+            <img src="img/story (2).jpg"><br>
+            <img src="img/story (3).JPG">
+        </div>
+        <input id="high" type="checkbox" />
+        <div class="high">
+            <img src="img/story (2).jpg"><br>
+            <img src="img/story (3).JPG">
+        </div>
+        <input id="campus" type="checkbox"/>
+        <div class="campus">
+            <img src="img/story (7).jpg"><br>
+            <img src="img/story (14).JPG"><br>
+            <img src="img/story (15).jpg"><br>
+            <img src="img/story (8).jpg"><br>
+            <img src="img/story (6).jpg"><br>
+        </div>
+    </body>
+</html>
