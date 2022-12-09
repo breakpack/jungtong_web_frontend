@@ -17,7 +17,7 @@
     100%{top:21vh;}    
 }
 @keyframes contents_big {
-    0%{width:0;}
+    0%{width:30%;}
     100%{width:100%;}    
 }
 @keyframes contents_small {
@@ -192,7 +192,7 @@ figcaption{
 }
 #baby:checked ~ .baby img{
     animation-name: contents_big;
-    animation-duration: 3s;
+    animation-duration: 2s;
     animation-fill-mode: forwards;
 }
 #baby:checked ~ .baby figure{
@@ -210,7 +210,7 @@ figcaption{
 }
 #ele:checked ~ .ele img{
     animation-name: contents_big;
-    animation-duration: 3s;
+    animation-duration: 2s;
     animation-fill-mode: forwards;
 }
 #ele:checked ~ .ele figure{
@@ -228,7 +228,7 @@ figcaption{
 }
 #high:checked ~ .high img{
     animation-name: contents_big;
-    animation-duration: 3s;
+    animation-duration: 2s;
     animation-fill-mode: forwards;
 }
 #high:checked ~ .high figure{
@@ -246,7 +246,7 @@ figcaption{
 }
 #campus:checked ~ .campus img{
     animation-name: contents_big;
-    animation-duration: 3s;
+    animation-duration: 2s;
     animation-fill-mode: forwards;
 }
 #campus:checked ~ .campus figure{
@@ -261,4 +261,14 @@ figcaption{
     display: initial;
     padding:10px;
     margin-top:11px;
+}
+figcaption{
+    margin:0;
+    padding:0;
+    width:100%;
+    height: 20px;
+}
+p{
+    position: relative;
+    margin:0;
 }
