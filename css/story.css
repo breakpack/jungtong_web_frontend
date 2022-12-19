@@ -28,6 +28,10 @@
     0%{visibility: hidden;}
     100%{visibility: visible;}
 }
+@keyframes mouse_over {
+    0%{opacity:1;}
+    100%{opacity: 0.5;}    
+}
 @font-face {
     font-family : 'SDMiSaeng';
     src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_two@1.0/SDMiSaeng.woff') format('woff');
@@ -180,6 +184,12 @@ input{
 .baby img, .ele img, .high img, .campus img{
     width:0;
     margin:0;
+}
+figure:hover{
+    cursor: pointer;
+    animation-name: mouse_over;
+    animation-duration: 0.5s;
+    animation-fill-mode: forwards;
 }
 .baby, .ele, .high, .campus{
     width:75%;
