@@ -6,83 +6,35 @@
         <link rel="stylesheet" href="css/story.css" />
     </head>
     <body>
-        <script>
-            function is_checked(){
-                var key = 0;
-                const baby_input = document.getElementById("baby");
-                const ele_input = document.getElementById("ele");
-                const high_input = document.getElementById("high");
-                const campus_input = document.getElementById("campus");
-
-                const baby_is_checked = baby_input.checked;
-                const ele_is_checked = ele_input.checked;
-                const high_is_checked = high_input.checked;
-                const campus_is_checked = campus_input.checked;
-
-                if(baby_is_checked){
-                    key += 1;
-                }
-                if(ele_is_checked){
-                    key += 1;
-                }
-                if(high_is_checked){
-                    key += 1;
-                }
-                if(campus_is_checked){
-                    key += 1;
-                }
-                
-                return key;
-            }
-
-            function checkbox_check(box_id){
-                const baby_input = document.getElementById("baby");
-                const ele_input = document.getElementById("ele");
-                const high_input = document.getElementById("high");
-                const campus_input = document.getElementById("campus");
-                
-                if(is_checked()){
-                    if(box_id == 'baby'){
-                        ele_input.checked=false;
-                        high_input.checked=false;
-                        campus_input.checked=false;
-                    }
-                    if(box_id == 'ele'){
-                        baby_input.checked=false;
-                        high_input.checked=false;
-                        campus_input.checked=false;
-                    }
-                    if(box_id == 'high'){
-                        baby_input.checked=false;
-                        ele_input.checked=false;
-                        campus_input.checked=false;
-                    }
-                    if(box_id == 'campus'){
-                        baby_input.checked=false;
-                        ele_input.checked=false;
-                        high_input.checked=false;
-                    }
-                }
-            }
-        </script>
+        <script type="text/javascript" src="js/checkbox.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-        <script>
-            $(document).ready(function(){
-                var currentPosition = parseInt($(".contents_side").css("top"));
-                $(window).scroll(function() {
-                  var position = $(window).scrollTop(); 
-                  $(".contents_side").stop().animate({"top":position+currentPosition/3.5+"px"},1000);
-                });
-            });
-        </script>
-        <input id="head" type="checkbox" />
+        <input id="head" type="radio" />
         <div class="head">
             <div class="sq">
                 <a href="home.html">
                     <h2 id="h2_1">
-                        &nbsp; CHA's Story
+                        CHA's Story
                     </h2>
                 </a>
+                <table>
+                    <tr>
+                        <td>
+                            <a href="project.html">
+                                <h2 id="h2_3">
+                                    My project
+                                </h2>
+                            </a>
+                        </td>
+                        <td id="vir">|</td>
+                        <td>
+                            <a href="artwork.html">
+                                <h2 id="h2_3">
+                                    My Artwork
+                                </h2>
+                            </a>
+                        </td>
+                    </tr>
+                </table>
                 <a href="story.html">
                     <h2 id="h2_2">
                         Story page
@@ -106,8 +58,7 @@
             </div>
         </div>
         <h2 id="contents_title">Contents</h2>
-        
-        <input id="baby" type="checkbox" checked/>
+        <input id="baby" type="radio" checked/>
         <div class="baby">
             <figure Onclick="location.href='img/2005.JPG'">
                 <img src="img/2005.JPG">
@@ -142,7 +93,7 @@
                 <figcaption>2005<br>&nbsp;이때는 앉아만 있어도 귀여웠구나</figcaption>
             </figure>
         </div>
-        <input id="ele" type="checkbox" />
+        <input id="ele" type="radio" />
         <div class="ele">
             <figure Onclick="location.href='img/2010 (2).JPG'">
                 <img src="img/2010 (2).JPG">
@@ -213,7 +164,7 @@
                 <figcaption>2015<br>&nbsp;아빠와 동생이랑 자전거로 국토종주를 성공한<br>&nbsp;소중한 추억이에요</figcaption>
             </figure>
         </div>
-        <input id="high" type="checkbox" />
+        <input id="high" type="radio" />
         <div class="high">
             <figure Onclick="location.href='img/2016.jpg'">
                 <img src="img/2016.jpg">
@@ -247,28 +198,48 @@
                 <img src="img/20180217_161637.jpg">
                 <figcaption>2018<br>&nbsp;커퓌</figcaption>
             </figure>
+            <figure Onclick="location.href='img/story1 (1).jpg'">
+                <img src="img/story1 (1).jpg">
+                <figcaption>2020<br>&nbsp;고2 때는 동안이였구나..</figcaption>
+            </figure>
+            <figure Onclick="location.href='img/story1 (2).jpg'">
+                <img src="img/story1 (2).jpg">
+                <figcaption>2020<br>&nbsp;코로나..ㅠ</figcaption>
+            </figure>           
         </div>
-        <input id="campus" type="checkbox"/>
+        <input id="campus" type="radio"/>
         <div class="campus">
             <figure Onclick="location.href='img/story (7).jpg'">
                 <img src="img/story (7).jpg">
-                <figcaption>test</figcaption>
+                <figcaption>2022<br>&nbsp;용지호수에서 밤새고!</figcaption>
             </figure>
             <figure Onclick="location.href='img/story (14).JPG'">
                 <img src="img/story (14).JPG">
-                <figcaption>test</figcaption>
+                <figcaption>2022<br>&nbsp;뒤에 나오는 사람과 동일인물 맞습니다</figcaption>
             </figure>
             <figure Onclick="location.href='img/story (15).jpg'">
                 <img src="img/story (15).jpg">
-                <figcaption>test</figcaption>
+                <figcaption>2022<br>&nbsp;학기 초 랍니다</figcaption>
             </figure>
             <figure Onclick="location.href='img/story (8).jpg'">
                 <img src="img/story (8).jpg">
-                <figcaption>test</figcaption>
+                <figcaption>2022<br>&nbsp;편의점 알바</figcaption>
             </figure>
             <figure Onclick="location.href='img/story (6).jpg'">
                 <img src="img/story (6).jpg">
-                <figcaption>test</figcaption>
+                <figcaption>2022<br>&nbsp;거울셀카를 많이 찍는..</figcaption>
+            </figure>
+            <figure Onclick="location.href='img/story1 (3).jpg'">
+                <img src="img/story1 (3).jpg">
+                <figcaption>2022<br>&nbsp;잘생겼..나?</figcaption>
+            </figure>
+            <figure Onclick="location.href='img/story1 (4).jpg'">
+                <img src="img/story1 (4).jpg">
+                <figcaption>2022<br>&nbsp;추워 죽을뻔</figcaption>
+            </figure>
+            <figure Onclick="location.href='img/story1 (5).jpg'">
+                <img src="img/story1 (5).jpg">
+                <figcaption>2022<br>&nbsp;머리에 삔꽂고 공부중</figcaption>
             </figure>
         </div>
     </body>

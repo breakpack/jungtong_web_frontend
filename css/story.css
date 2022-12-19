@@ -44,6 +44,7 @@ body,html {
     height: 0;
     margin:0;
     background-color: #F9EBDE;
+    cursor: url(../img/pointer1.png) 32 32,auto;
 }
 #head{
     width:0;
@@ -57,6 +58,7 @@ body,html {
     width:100%;
     height:33%;
     animation: head_down 2s forwards;
+    cursor: url(../img/pointer3.png) 32 32,auto;
 }
 .sq{
     overflow: hidden;
@@ -71,13 +73,19 @@ body,html {
 .sq a{
     text-decoration: none;
     width:300px;
+    cursor: url(../img/pointer3.png) 32 32,auto;
 }
 .sq #h2_1{
     position: absolute;
-    top:-5%;
-    width:30%;
+    left:30px;
+    top:20%;
+    width:20%;
     color: #F9EBDE;
     font-size: 70px;
+}
+.sq #h2_1:hover{
+    text-decoration: underline;
+    text-underline-position: under;
 }
 .sq #h2_2{
     z-index: 10;
@@ -88,7 +96,33 @@ body,html {
     width:auto;
     width:auto;
     color: #F9EBDE;
+    font-size: 50px;
+    transform: rotate(5deg);
+}
+#h2_2:hover{
+    text-decoration: underline;
+}
+table{
+    position: relative;
+    top:70%;
+    margin-right:5%;
+    float:right;
+    transform:rotate(6deg);
+}
+#vir{
+    font-size: 20px;
+    font-weight:600;
+    color:#F9EBDE;
+    font-family: 'Courier New', Courier, monospace;
+}
+table a, table h2{
+    text-decoration: none;
+    color:#F9EBDE;
     font-size: 30px;
+    cursor: url(../img/pointer3.png) 32 32,auto;
+}
+table a:hover{
+    text-decoration: underline;
 }
 .tra{
     overflow: hidden;
@@ -113,7 +147,6 @@ body,html {
     animation: wave 10s infinite linear;
 }
 #head_btn:hover{
-    cursor: Pointer;
     animation: wave 1s infinite linear;
 }
 div{
@@ -126,11 +159,16 @@ div{
     height: 73vh;
     bottom:0;
     animation: contents_ani 3s forwards;
+    cursor: url(../img/pointer1.png) 32 32,auto;
+}
+#sidebarbtn{
+    cursor: url(../img/pointer1.png) 32 32,auto;
 }
 .sub_side{
     position: relative;
     width:100%;
     height:120%;
+    cursor: url(../img/pointer1.png) 32 32,auto;
 }
 .sub_side hr{
     position:absolute;
@@ -151,8 +189,8 @@ div{
     width: 50px;
     height: 50px;
     border-radius: 50%;
-    cursor: Pointer;
     background-color: #815854;
+    cursor: url(../img/pointer2.png) 32 32,auto;
 }
 .sub_side #contents{
     position: relative;
@@ -167,7 +205,7 @@ div{
     position:absolute;
     font-size: 50px;
     color:#815854;
-
+    width:15em;
     animation-name: contents_ani2;
     animation-duration: 3s;
     animation-fill-mode: forwards;
@@ -186,7 +224,6 @@ input{
     margin:0;
 }
 figure:hover{
-    cursor: pointer;
     animation-name: mouse_over;
     animation-duration: 0.5s;
     animation-fill-mode: forwards;
