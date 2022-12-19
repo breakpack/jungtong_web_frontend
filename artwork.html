@@ -2,53 +2,54 @@
 <html lang="ko">
     <head>
         <meta charset="utf-8">
-        <title>story</title>
-        <link rel="stylesheet" href="css/artwork.css" />
+        <title>artwork</title>
+        <link rel="stylesheet" href="css/story.css" />
     </head>
     <body>
+        <script type="text/javascript" src="js/checkbox2.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
         <script>
-            
-            function is_checked(){
-                var key = 0;
-                const art_input = document.getElementById("art");
-                const photo_input = document.getElementById("photo");
-            
-                const art_is_checked = art_input.checked;
-                const photo_is_checked = photo_input.checked;
-                
-                if(art_is_checked){
-                    key += 1;
-                }
-                if(photo_is_checked){
-                    key += 1;
-                }
-                
-                return key;
-            }
-
-            function checkbox_check(box_id){
-                const art_input = document.getElementById("art");
-                const photo_input = document.getElementById("photo");
-                
-                if(is_checked()){
-                    if(box_id == 'art'){
-                        photo_input.checked=false;
-                    }
-                    if(box_id == 'photo'){
-                        art_input.checked=false;
-                    }
-                }
-            }
+            $(document).ready(function(){
+                var currentPosition = parseInt($(".contents_side").css("top"));
+                $(window).scroll(function() {
+                  var position = $(window).scrollTop(); 
+                  $(".contents_side").stop().animate({"top":position+currentPosition/3.5+"px"},1000);
+                });
+            });
         </script>
-        <input id="head" type="checkbox" />
+        <input id="head" type="radio" />
         <div class="head">
             <div class="sq">
                 <a href="home.html">
                     <h2 id="h2_1">
-                        &nbsp; CHA's Story
+                        CHA's Story
                     </h2>
                 </a>
+                <table>
+                    <tr>
+                        <td>
+                            <a href="project.html">
+                                <h2 id="h2_3">
+                                    My Project
+                                </h2>
+                            </a>
+                        </td>
+                        <td id="vir">|</td>
+                        <td>
+                            <a href="story.html">
+                                <h2 id="h2_3">
+                                    My Story
+                                </h2>
+                            </a>
+                        </td>
+                    </tr>
+                </table>
                 <a href="story.html">
+                    <style>
+                        #h2_2{
+                            margin-left:-20px;
+                        }
+                    </style>
                     <h2 id="h2_2">
                         Artwork page
                     </h2>
@@ -60,28 +61,72 @@
             <div class="sub_side">
                 <div id="head_btn" onClick="javascript:window.scrollTo(0,0)"></div>
                 <hr>
-                <label for="art" id="sidebarbtn"><div id="circle1" class="circle" Onclick="checkbox_check('art')"></div></label>
+                <label for="baby" id="sidebarbtn"><div id="circle1" class="circle" Onclick="checkbox_check('baby')"></div></label>
                 <div id="contents">Drawing</div>
-                <label for="photo" id="sidebarbtn"><div id="circle2" class="circle" Onclick="checkbox_check('photo')"></div></label>
+                <label for="ele" id="sidebarbtn"><div id="circle2" class="circle" Onclick="checkbox_check('ele')"></div></label>
                 <div id="contents">Photo</div>
             </div>
         </div>
-        <h2 id="contents_title">Contents</h2>
         
-        <input id="art" type="checkbox" checked/>
-        <div class="art">
-            <img src="img/artwork (2).png"><br><br><br>
-            <img src="img/artwork (3).png"><br><br><br>
-            <img src="img/artwork (4).png"><br><br><br>
-            <img src="img/artwork (8).png"><br><br><br>
-            <img src="img/artwork.png"><br><br><br>
+        <h2 id="contents_title">Contents</h2>
+        <input id="baby" type="radio" checked/>
+        <div class="baby">
+            <figure Onclick="location.href='img/artwork (2).png'">
+                <img src="img/artwork (2).png">
+                <figcaption>-2021- 밤하늘
+                    <br>&nbsp;파스텔, 물감
+                    <br>&nbsp;실제 사진을 배경으로 그린작품
+                </figcaption>
+            </figure>
+            <figure Onclick="location.href='img/artwork (3).png'">
+                <img src="img/artwork (3).png">
+                <figcaption>-2021- 해질녘
+                    <br>&nbsp;유채색연필
+                    <br>&nbsp;해가 지는걸 보고 영감을 받아 그린작품
+                </figcaption>
+            </figure>
+            <figure Onclick="location.href='img/artwork (4).png'">
+                <img src="img/artwork (4).png">
+                <figcaption>-2021- 빛
+                    <br>&nbsp;유채색연필
+                    <br>&nbsp;해가 진 후 어두워진걸 보고 그린작품
+                </figcaption>
+            </figure>
+            <figure Onclick="location.href='img/artwork (8).png'">
+                <img src="img/artwork (8).png">
+                <figcaption>-2021- 비행기
+                    <br>&nbsp;디지털그림
+                    <br>&nbsp;비행기 탔을 때 찍었던 사진을 바탕으로 그
+                    <br>&nbsp;린작품
+                </figcaption>
+            </figure>
+            <figure Onclick="location.href='img/artwork.png'">
+                <img src="img/artwork.png">
+                <figcaption>-2021- 탄지로
+                    <br>&nbsp;분필
+                    <br>&nbsp;방학오후자습 때 그리다가 선생님한테 많
+                    <br>&nbsp;이 혼났다고 하네요..
+                </figcaption>
+            </figure>
         </div>
-        <input id="photo" type="checkbox" />
-        <div class="photo">
-            <img src="img/artwork (1).png"><br><br><br>
-            <img src="img/artwork (6).png"><br><br><br>
-            <img src="img/artwork (7).png"><br><br><br>
-            <img src="img/artwork (9).png"><br><br><br>
+        <input id="ele" type="radio" />
+        <div class="ele">
+            <figure Onclick="location.href='img/artwork (1).png'">
+                <img src="img/artwork (1).png">
+                <figcaption>2010<br>&nbsp;새모이 주는데 진심..</figcaption>
+            </figure>
+            <figure Onclick="location.href='img/artwork (6).png'">
+                <img src="img/artwork (6).png">
+                <figcaption>2010<br>&nbsp;새모이 주는데 진심..</figcaption>
+            </figure>
+            <figure Onclick="location.href='img/artwork (7).png'">
+                <img src="img/artwork (7).png">
+                <figcaption>2010<br>&nbsp;새모이 주는데 진심..</figcaption>
+            </figure>
+            <figure Onclick="location.href='img/artwork (9).png'">
+                <img src="img/artwork (9).png">
+                <figcaption>2010<br>&nbsp;새모이 주는데 진심..</figcaption>
+            </figure>
         </div>
     </body>
 </html>

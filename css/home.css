@@ -53,6 +53,7 @@
     font-style: normal;
 }
 body{
+    cursor:url(../img/pointer1.png) 32 32, auto;
     font-family: 'SDMiSaeng';
     background-color: #815854;
     margin:0;
@@ -62,6 +63,7 @@ body{
     animation-fill-mode: forwards;
 }
 .background{
+    cursor:url(../img/pointer1.png) 32 32, auto;
     z-index: 1;
     position: absolute;
     animation-name: size_up;
@@ -71,6 +73,7 @@ body{
     width:100%;
 }
 h3{
+    cursor:url(../img/pointer1.png) 32 32, auto;
     z-index: 11;
     width:10%;
     position: absolute;;
@@ -78,18 +81,22 @@ h3{
     color:#815854;
 }
 #login{
+    cursor:url(../img/pointer1.png) 32 32, auto;
     right:6em;
     font-size: 23px;
 }
 #register{
+    cursor:url(../img/pointer1.png) 32 32, auto;
     right:3em;
     font-size: 23px
 }
 h3:hover{
+    cursor:url(../img/pointer1.png) 32 32, auto;
     cursor: pointer;
     text-decoration: underline;
 }
 .wrapper {
+    cursor:url(../img/pointer1.png) 32 32, auto;
     width: 100%;
     height: 100%;
     top:0px;
@@ -97,6 +104,7 @@ h3:hover{
     overflow: hidden;
 }
 .wave {
+    cursor:url(../img/pointer3.png) 32 32, auto;
     z-index: 1;
     top:-25%;
     right:20%;
@@ -111,6 +119,7 @@ h3:hover{
     animation: wave 30s infinite linear;
 }
 #sidebar {
+    cursor:url(../img/pointer1.png) 32 32, auto;
     width: 0px;
     height: 0px;
     padding: 0px;
@@ -118,15 +127,18 @@ h3:hover{
     position:absolute; 
 }
 #sidebarbtn{
+    cursor:url(../img/pointer1.png) 32 32, auto;
     position:relative;
     left:80%;
     top:1%;
     font-size: 50px;
 }
 #sidebarbtn:hover{
+    cursor:url(../img/pointer1.png) 32 32, auto;
     cursor: pointer; 
 }
 .sidebar{
+    cursor:url(../img/pointer3.png) 32 32, auto;
     float:left;
     position: fixed;
     left:-26vw;
@@ -158,6 +170,7 @@ h3:hover{
     margin-bottom:0;
 }
 .index a{
+    cursor:url(../img/pointer3.png) 32 32, auto;
     text-decoration: none;
     color:#F9EBDE;
     font-size:30px;
@@ -174,6 +187,7 @@ h3:hover{
     animation-fill-mode: forwards;
 }
 .contents{
+    cursor:url(../img/pointer1.png) 32 32, auto;
     position: relative;
     left: 10%;
     width: 90%;
@@ -181,16 +195,19 @@ h3:hover{
     margin: 0;
 }
 .contents{
+    cursor:url(../img/pointer1.png) 32 32, auto;
     animation-name: contents_big;
     animation-duration: 2s;
     animation-fill-mode: forwards;
 }
 #sidebar:checked ~ .contents {
+    cursor:url(../img/pointer1.png) 32 32, auto;
     animation-name: contents_small;
     animation-duration: 2s;
     animation-fill-mode: forwards;
 }
 .contents #title{
+    cursor:url(../img/pointer1.png) 32 32, auto;
     visibility: hidden;
     position: absolute;
     color:#815854;
@@ -207,6 +224,7 @@ h3:hover{
     animation-fill-mode: forwards;
 }
 .contents hr{
+    cursor:url(../img/pointer1.png) 32 32, auto;
     position: relative;
     background-color:#815854;
     border:0;
@@ -217,6 +235,7 @@ h3:hover{
     border-radius: 5px;
 }
 .icon{
+    cursor:url(../img/pointer3.png) 32 32, auto;
     width: 30px;
     height:30px;
     background-color: #815854;
@@ -229,6 +248,7 @@ h3:hover{
     bottom:-11%;
 }
 .ins_sq{
+    cursor:url(../img/pointer3.png) 32 32, auto;
     position: absolute;
     width: 22px;
     height: 22px;
@@ -236,6 +256,7 @@ h3:hover{
     border-radius: 30%;
 }
 .ins_circle1{
+    cursor:url(../img/pointer3.png) 32 32, auto;
     position: absolute;
     width: 15px;
     height: 15px;
@@ -243,6 +264,7 @@ h3:hover{
     border-radius: 50%;
 }
 .ins_circle2{
+    cursor:url(../img/pointer3.png) 32 32, auto;
     position: absolute;
     width: 8px;
     height: 8px;
@@ -250,6 +272,7 @@ h3:hover{
     border-radius: 50%;
 }
 .ins_circle3{
+    cursor:url(../img/pointer3.png) 32 32, auto;
     position: relative;
     left:24%;
     bottom:24%;
@@ -259,6 +282,7 @@ h3:hover{
     border-radius: 50%;
 }
 #sidebar_btn{
+    cursor:url(../img/pointer1.png) 32 32, auto;
     margin-left: 10%;
     margin-top: 8%;
     width:30px;
@@ -268,32 +292,38 @@ h3:hover{
     animation: wave 10s infinite linear;
 }
 #sidebar_btn:hover{
+    cursor:url(../img/pointer1.png) 32 32, auto;
     width:40px;
     height: 40px;
     animation: wave 3s infinite linear;
 }
 .intro{
+    cursor:url(../img/pointer1.png) 32 32, auto;
     margin-top:10%;
     position: absolute;
     width:50%;
     left:11%;
 }
 .intro div{
+    cursor:url(../img/pointer1.png) 32 32, auto;
     color:#815854;
     width:80%;
     font-size: 30px;
 }
 .intro h2{
+    cursor:url(../img/pointer1.png) 32 32, auto;
     color:#815854;
     width:80%;;
     font-size: 300%;
 }
 .contents #img1{
+    cursor:url(../img/pointer1.png) 32 32, auto;
     position: relative;
     left:58%;
     margin-top: 3%;
 }
 .contents2{
+    cursor:url(../img/pointer1.png) 32 32, auto;
     position: relative;
     left: 10%;
     width: 90%;
@@ -301,16 +331,19 @@ h3:hover{
     margin: 0;
 }
 .contents2{
+    cursor:url(../img/pointer1.png) 32 32, auto;
     animation-name: contents_big;
     animation-duration: 2s;
     animation-fill-mode: forwards;
 }
 #sidebar:checked ~ .contents2{
+    cursor:url(../img/pointer1.png) 32 32, auto;
     animation-name: contents_small;
     animation-duration: 2s;
     animation-fill-mode: forwards;
 }
 .contents2 #bar1{
+    cursor:url(../img/pointer1.png) 32 32, auto;
     position: relative;
     background-color:#815854;
     border:0;
@@ -322,6 +355,7 @@ h3:hover{
     top:-15%;
 }
 .contents2 #title{
+    cursor:url(../img/pointer1.png) 32 32, auto;
     position: relative;
     color:#815854;
     width:80%;;
@@ -331,39 +365,46 @@ h3:hover{
     left:5%;
 }
 #img2{
+    cursor:url(../img/pointer1.png) 32 32, auto;
     position: relative;
     left:10%;
     margin-top: -3%;
 }
 #img3{
+    cursor:url(../img/pointer1.png) 32 32, auto;
     position: relative;
     left:10%;
     margin-top: -10%;
 }
 .link1{
+    cursor:url(../img/pointer1.png) 32 32, auto;
     position: relative;
     left:45%;
     top:-40%;
     width:50%;
 }
 .link1 h2{
+    cursor:url(../img/pointer1.png) 32 32, auto;
     left:30%;
     color:#815854;
     width:80%;;
     font-size: 200%;
 }
 .link1 div{
+    cursor:url(../img/pointer1.png) 32 32, auto;
     color:#815854;
     width:80%;;
     font-size: 150%;
 }
 .link2{
+    cursor:url(../img/pointer1.png) 32 32, auto;
     position: relative;
     left:45%;
     top:-40%;
     width:50%;
 }
 .link2 h2{
+    cursor:url(../img/pointer1.png) 32 32, auto;
     margin-top: 13%;
     left:30%;
     color:#815854;
@@ -371,11 +412,13 @@ h3:hover{
     font-size: 200%;
 }
 .link2 div{
+    cursor:url(../img/pointer1.png) 32 32, auto;
     color:#815854;
     width:80%;;
     font-size: 150%;
 }
 .contents3 #title{
+    cursor:url(../img/pointer1.png) 32 32, auto;
     visibility: hidden;
     position: absolute;
     color:#815854;
@@ -392,6 +435,7 @@ h3:hover{
     animation-fill-mode: forwards;
 }
 .contents3 hr{
+    cursor:url(../img/pointer1.png) 32 32, auto;
     position: relative;
     background-color:#815854;
     border:0;
@@ -402,6 +446,7 @@ h3:hover{
     border-radius: 5px;
 }
 .contents3{
+    cursor:url(../img/pointer1.png) 32 32, auto;
     top:-20%;
     position: relative;
     left: 10%;
@@ -410,37 +455,45 @@ h3:hover{
     margin: 0;
 }
 .contents3{
+    cursor:url(../img/pointer1.png) 32 32, auto;
     animation-name: contents_big;
     animation-duration: 2s;
     animation-fill-mode: forwards;
 }
 #sidebar:checked ~ .contents3 {
+    cursor:url(../img/pointer1.png) 32 32, auto;
     animation-name: contents_small;
     animation-duration: 2s;
     animation-fill-mode: forwards;
 }
 #img1{
+    cursor:url(../img/pointer1.png) 32 32, auto;
     width: 0;
 }
 #img1{
+    cursor:url(../img/pointer1.png) 32 32, auto;
     animation-delay: 1s;
     animation-name: img1_ani;
     animation-duration: 1s;
     animation-fill-mode: forwards;
 }
 #img2{
+    cursor:url(../img/pointer1.png) 32 32, auto;
     width: 0;
 }
 #img2{
+    cursor:url(../img/pointer1.png) 32 32, auto;
     animation-delay: 1s;
     animation-name: img2_ani;
     animation-duration: 1s;
     animation-fill-mode: forwards;
 }
 #img3{
+    cursor:url(../img/pointer1.png) 32 32, auto;
     width: 0;
 }
 #img3{
+    cursor:url(../img/pointer1.png) 32 32, auto;
     animation-delay: 1s;
     animation-name: img3_ani;
     animation-duration: 1s;

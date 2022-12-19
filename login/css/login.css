@@ -5,6 +5,7 @@
     font-style: normal;
 }
 body{
+    cursor: url(../../img/pointer1.png) 32 32,auto;
     font-family: 'SDMiSaeng';
     background-color: #F9EBDE;
 }
@@ -19,8 +20,6 @@ form legend {
     font-size: 18px;
     color: #815854;
     font-weight: 600;
-}
-legend{
 }
 fieldset{
     display:flex;
@@ -52,8 +51,12 @@ input{
 tr{
     height:50px;
 }
-td{
-}
 font{
     font-size: 30px;
+}
+div{
+    cursor: url(../../img/pointer3.png) 32 32,auto;
+}
+#lo{
+    cursor: url(../../img/pointer3.png) 32 32,auto;
 }

@@ -27,7 +27,7 @@ else{
                         <td><input type="password" id="pw" name="pw" size="20" autocomplete="on" required></td>
                     </tr>
                     <tr>
-                        <td colspan=2 align=center><button type="submit" id="lo">LOGIN</button></td>
+                        <td colspan=2 align=center><div><button type="submit" id="lo">LOGIN</button></div></td>
                     </tr>
 			    </table>
 			</fieldset>

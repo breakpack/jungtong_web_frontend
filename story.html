@@ -8,6 +8,15 @@
     <body>
         <script type="text/javascript" src="js/checkbox.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+        <script>
+            $(document).ready(function(){
+                var currentPosition = parseInt($(".contents_side").css("top"));
+                $(window).scroll(function() {
+                  var position = $(window).scrollTop(); 
+                  $(".contents_side").stop().animate({"top":position+currentPosition/3.5+"px"},1000);
+                });
+            });
+        </script>
         <input id="head" type="radio" />
         <div class="head">
             <div class="sq">
@@ -21,7 +30,7 @@
                         <td>
                             <a href="project.html">
                                 <h2 id="h2_3">
-                                    My project
+                                    My Project
                                 </h2>
                             </a>
                         </td>
@@ -240,6 +249,14 @@
             <figure Onclick="location.href='img/story1 (5).jpg'">
                 <img src="img/story1 (5).jpg">
                 <figcaption>2022<br>&nbsp;머리에 삔꽂고 공부중</figcaption>
+            </figure>
+            <figure Onclick="location.href='img/mirror.jpg'">
+                <img src="img/mirror.jpg">
+                <figcaption>2022<br>&nbsp;여자친구랍니다!</figcaption>
+            </figure>
+            <figure Onclick="location.href='img/gif1.gif'">
+                <img src="img/gif1.gif">
+                <figcaption>2022<br>&nbsp;저건..무슨춤일까요..?</figcaption>
             </figure>
         </div>
     </body>
