@@ -52,6 +52,9 @@
     font-weight: normal;
     font-style: normal;
 }
+html{
+    cursor:url(../img/pointer1.png) 32 32, auto;
+}
 body{
     cursor:url(../img/pointer1.png) 32 32, auto;
     font-family: 'SDMiSaeng';

@@ -1,3 +1,7 @@
+<?
+session_start();
+$id = $_SESSION['user_id']; 
+?>
 <!DOCTYPE html>
 <html lang="ko">
     <head>
@@ -56,6 +60,9 @@
             <div class="sub_side">
                 <div id="head_btn" onClick="javascript:window.scrollTo(0,0)"></div>
                 <hr>
+                <? 
+                if(isset($id)) {
+                ?>
                 <label for="baby" id="sidebarbtn"><div id="circle1" class="circle" Onclick="checkbox_check('baby')"></div></label>
                 <div id="contents">유딩 원제</div>
                 <label for="ele" id="sidebarbtn"><div id="circle2" class="circle" Onclick="checkbox_check('ele')"></div></label>
@@ -64,6 +71,19 @@
                 <div id="contents">중●고딩 원제</div>
                 <label for="campus" id="sidebarbtn"><div id="circle5" class="circle" Onclick="checkbox_check('campus')"></div></label>
                 <div id="contents">현재의 원제</div>
+                <?
+                }
+                else{
+                ?>
+                <label for="baby" id="sidebarbtn"><div id="circle1" class="circle" Onclick="checkbox_check('baby')"></div></label>
+                <div id="contents">유딩 원제</div>
+                <label for="ele" id="sidebarbtn"><div id="circle2" class="circle" Onclick="checkbox_check('ele')"></div></label>
+                <div id="contents">초딩 원제</div>
+                <label for="high" id="sidebarbtn"><div id="circle3" class="circle" Onclick="checkbox_check('high')"></div></label>
+                <div id="contents">중●고딩 원제</div>
+                <?
+                }
+                ?>
             </div>
         </div>
         <h2 id="contents_title">Contents</h2>
