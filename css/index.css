@@ -57,6 +57,7 @@ body{
     left:5px;
 }
 #bar1{
+    border-radius: 50px;
     animation-name: loading_ani;
     animation-duration: 5s;
     animation-fill-mode: forwards;

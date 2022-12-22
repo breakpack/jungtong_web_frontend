@@ -224,6 +224,7 @@ input{
     margin:0;
 }
 figure:hover{
+    /*마우스 오버 수정 필요*/
     animation-name: mouse_over;
     animation-duration: 0.5s;
     animation-fill-mode: forwards;
